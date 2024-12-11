@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Lato:600);
+  
+body {
+    font-family: 'Lato', sans-serif; /* Make sure the font family is applied correctly */
+    display: flex;
+    flex-direction: column; /* Allow header at the top and rotating text at the bottom */
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+  
+  /* Header styles */
+header.head {
+    background:rgba(128, 128, 128, 0.6);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Evenly space items */
+    width: 100%; /* Stretch across the top of the screen */
+    position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it stays above other elements */
+
+}
+  
+header.head h1 {
+    font-size: 40px;
+    margin-left: 40px;
+    flex-shrink: 0;
+    color: white;
+}
+  
+  /* Align dropdown and buttons */
+.nav-menu {
+    display: flex;
+    gap: 50px; /* Adjust spacing between buttons */
+    margin-right: 50px;
+}
+  /* Button styling */
+.clickbutton {
+    background-color: #515351be;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 3.5%;
+}
+
+/* Signup Container */
+.forgot {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Position it vertically in the middle */
+    left: 50%; /* Position it horizontally in the middle */
+    transform: translate(-50%, -50%); /* Offset by 50% of its width and height to center it */
+    color: white; /* Make text inside the signup container white */
+}
+  
+
+/* Remove margin-top for h1 inside .login */
+.forgot h2 {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 1%;
+  color: white; /* Ensure the h1 text is white */
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+input {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3173fa;
+  box-shadow: 0 0 5px rgba(49, 115, 250, 0.6);
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: white; /* Ensure labels are also white */
+}
+
+/* Styling for the <a> element */
+.forgot a {
+  text-align: center;
+  color: #3173fa;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+button {
+  background-color: #3173fa;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 7%;
+}
+
+button:hover {
+  background-color: #2558a0;
+}
+
+/* Responsive Styling */
+@media (max-width: 400px) {
+  .login {
+    width: 90%;
+  }
+}

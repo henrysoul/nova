@@ -1,0 +1,304 @@
+#numberofath {
+    display: none; /* Initially hide the label */
+}
+
+#athletes {
+    display: none; /* Initially hide the input field */
+}
+/* Apply a simple reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:600);
+
+body {
+  font-family: 'Lato', sans-serif; /* Make sure the font family is applied correctly */
+  display: flex;
+  flex-direction: column; /* Allow header at the top and rotating text at the bottom */
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+}
+
+/* Header styles */
+header.head {
+  background-color: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Evenly space items */
+  width: 100%; /* Stretch across the top of the screen */
+  position: fixed; /* Fix header at the top */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+header.head h1 {
+  font-size: 32px;
+  margin-left: 40px;
+  flex-shrink: 0;
+  color: white;
+}
+
+/* Align dropdown and buttons */
+.nav-menu {
+  display: flex;
+  gap: 50px; /* Adjust spacing between buttons */
+  margin-right: 50px;
+}
+
+/* Button styling */
+.clickbutton {
+  background-color: #515351be;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+body {
+  font-family: 'Lato', sans-serif; /* Make sure the font family is applied correctly */
+    height: 100vh; /* Make the body fill the full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: #222;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:600);
+/* Wrapper for buttons to align them in a row */
+.button-row {
+    display: flex;
+    flex-direction: row !important; /* Arrange buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    width: 100%; /* Ensure buttons take up full width */
+}
+
+/* Container settings */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Set a max width to keep the container from getting too large */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for a clean effect */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: left;
+
+}
+
+
+/* Button settings */
+button.setting {
+    width: 20%; /* Set the width of the button */
+    padding: 10px;
+    margin: 0 10px; /* Add horizontal spacing between buttons */
+    background-color: #3173fa; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Input and button styling */
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Align label text to the left */
+
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Make input fields full width */
+    padding: 10px;
+    margin-bottom: 15px; /* Add space between fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+
+button.setting:hover {
+    background-color: #245ba1; /* Darker blue when hovered */
+}
+
+/* Number of Athletes input initially hidden */
+#numberofath, #athletes {
+    display: none; /* Hidden by default */
+}
+
+/* Media queries to ensure responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}
+/* Global styles for the form */
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+/* Style for the date input */
+input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Focused input state */
+input[type="date"]:focus {
+    border-color: #008FFD;
+    background-color: #eef7ff;
+    box-shadow: 0 0 5px rgba(0, 143, 253, 0.5);
+}
+
+/* Hover state */
+input[type="date"]:hover {
+    border-color: #888;
+}
+
+/* Invalid state (optional) */
+input[type="date"]:invalid {
+    border-color: #f44336;
+}
+
+/* Placeholder text style (if any) */
+input[type="date"]::placeholder {
+    color: #999;
+}
+
+/* Additional form spacing */
+form {
+    margin: 20px;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container button {
+    width: 20%; /* Button width */
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px; /* Space below button */
+    background-color: #3173fa; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center; /* Ensure text inside button is centered */
+}
+/* Style for the popup */
+.popup {
+    display: none; /* Initially hide the popup */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+    text-align: center;
+}
+
+
+.info {
+    max-width: 40%; /* Restrict the width for better readability */
+    margin: 20px auto; /* Center the container and add vertical margin */
+    padding: 20px; /* Add internal spacing */
+    border: 1px solid #ccc; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners for modern design */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+}
+.info button{
+    padding: 20px;
+    border: none;
+    background-color: #999;
+    border-radius: 10px;
+    position: relative;
+    left: 38%;
+
+}
+.info h3, .info h4 {
+    color: #333; /* Darker text for headers */
+    margin-bottom: 10px; /* Space below headers */
+}
+
+.info p {
+    color: #555; /* Slightly lighter text for content */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.colum {
+    display: block; /* Ensure items stack vertically */
+    margin-bottom: 5px; /* Space between list items */
+}
+
+
+/* Style for the cancel button */
+#cancel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#cancel:hover {
+    background-color: #d32f2f;
+}
+
+/* Overlay for popup */
+.popup-overlay {
+    display: none; /* Initially hide the overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

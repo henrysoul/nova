@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Lato:600);
+  
+body {
+    font-family: 'Lato', sans-serif; /* Make sure the font family is applied correctly */
+    display: flex;
+    flex-direction: column; /* Allow header at the top and rotating text at the bottom */
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+  
+header.head {
+    background-color: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Evenly space items */
+    width: 100%; /* Stretch across the top of the screen */
+    position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it stays above other elements */
+}
+  
+header.head h1 {
+    font-size: 40px;
+    margin-left: 40px;
+    flex-shrink: 0;
+    color: white;
+}
+  
+  /* Align dropdown and buttons */
+.nav-menu {
+    display: flex;
+    gap: 50px; /* Adjust spacing between buttons */
+    margin-right: 50px;
+}
+  
+  /* Button styling */
+.clickbutton {
+    background-color: #515351be;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 3.5%;
+}
+  
+/* Rotating text */
+.rotating-text {
+    font-weight: 600;
+    font-size: 36px;
+    color: white;
+    position: absolute; /* Ensure it can layer properly */
+    bottom: 14%; /* 100px from the bottom */
+    left: 9%; /* 70px from the right */
+    z-index: 200; /* Higher value to ensure it's above other content */
+}
+  
+
+/* Ensure that the container stays behind the rotating text */
+.container {
+  position: relative; /* Allow the container to stack behind the rotating text */
+  z-index: 100; /* Lower than rotating text */
+}
+
+/* Fix z-index on other elements */
+body, .container, main {
+  z-index: auto; /* Remove z-index: -1; to avoid interfering */
+}
+
+.rotating-text p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+}
+
+.rotating-text .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.rotating-text .letter {
+  transform-origin: center center 25px;
+}
+
+.rotating-text .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.rotating-text .letter.in {
+  transition: 0.38s ease;
+}
+
+.rotating-text .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.alizarin {
+  color: #e74c3c;
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.peter-river {
+  color: #3498db;
+}
+
+.emerald {
+  color: #2ecc71;
+}
+
+.sun-flower {
+  color: #f1c40f;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.letter.out {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.letter.behind {
+  opacity: 0;
+}
+
+.letter.in {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Login Container */
+.login {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Change to absolute positioning */
+  top: 50%; /* Position it vertically in the middle */
+  right: 10%; /* 10% from the right side */
+  transform: translateY(-50%); /* Offset by 50% of its height to center it vertically */
+  color: white; /* Make text inside the login container white */
+}
+
+/* Remove margin-top for h1 inside .login */
+.login h2 {
+  margin-top: 0; /* Remove top margin */
+  color: white; /* Ensure the h1 text is white */
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+input {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3173fa;
+  box-shadow: 0 0 5px rgba(49, 115, 250, 0.6);
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: white; /* Ensure labels are also white */
+}
+
+/* Styling for the <a> element */
+.login a {
+  text-align: center;
+  color: #3173fa;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+button {
+  background-color: #3173fa;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 7%;
+}
+
+button:hover {
+  background-color: #2558a0;
+}
+
+/* Responsive Styling */
+@media (max-width: 400px) {
+  .login {
+    width: 90%;
+  }
+}

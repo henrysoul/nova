@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Lato:600);
+  
+body {
+    font-family: 'Lato', sans-serif; /* Make sure the font family is applied correctly */
+    display: flex;
+    flex-direction: column; /* Allow header at the top and rotating text at the bottom */
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+  
+  /* Header styles */
+header.head {
+    background:rgba(128, 128, 128, 0.6);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Evenly space items */
+    width: 100%; /* Stretch across the top of the screen */
+    position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it stays above other elements */
+
+}
+  
+header.head h1 {
+    font-size: 40px;
+    margin-left: 40px;
+    flex-shrink: 0;
+    color: white;
+}
+  
+  /* Align dropdown and buttons */
+.nav-menu {
+    display: flex;
+    gap: 50px; /* Adjust spacing between buttons */
+    margin-right: 50px;
+}
+  
+  /* Button styling */
+.clickbutton {
+    background-color: #515351be;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 3.5%;
+}
+  
+/* Signup Container */
+.signup {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Position it vertically in the middle */
+    left: 50%; /* Position it horizontally in the middle */
+    transform: translate(-50%, -50%); /* Offset by 50% of its width and height to center it */
+    color: white; /* Make text inside the signup container white */
+}
+  
+
+/* Remove margin-top for h1 inside .login */
+.signup h2 {
+  margin-top: 0; /* Remove top margin */
+  color: white; /* Ensure the h1 text is white */
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+input {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3173fa;
+  box-shadow: 0 0 5px rgba(49, 115, 250, 0.6);
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: white; /* Ensure labels are also white */
+}
+
+/* Styling for the <a> element */
+.signup a {
+  text-align: center;
+  color: #3173fa;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+button {
+  background-color: #3173fa;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 7%;
+}
+
+button:hover {
+  background-color: #2558a0;
+}
+
+/* Responsive Styling */
+@media (max-width: 400px) {
+  .login {
+    width: 90%;
+  }
+}
+
+/* App Container */
+.app {
+    display: flex;
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Position it vertically in the middle */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Offset by 50% of its width and height to center it */
+    min-width: 100%;
+    height: 100vh;
+    z-index:-1;
+
+}
+
+.tag-list {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  
+}
+
+.loop-slider {
+  .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+    margin-left: 25%;
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  background-color: #334155;
+  border-radius: 0.4rem;
+  padding: 1.5rem 1.9rem;
+  margin-right: 1rem; 
+  box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+  
+  span {
+    font-size: 1.2rem;
+    color: #64748b;
+  }
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
