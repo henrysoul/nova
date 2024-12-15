@@ -1,4 +1,58 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{asset('assets/css/landingstyle.css')}}">
+    
+</head>
+<body>
+    @include('includes.header')
+   
+    <div class="rotating-text">
+        <p>Nova Tracking is</p>
+        <p>
+          <span class="word alizarin">groundbreaking.</span>
+          <span class="word wisteria">beautiful.</span>
+          <span class="word peter-river">game changing.</span>
+          <span class="word emerald">different.</span>
+          <span class="word sun-flower">special.</span>
+        </p>
+    </div>
+    <div class="container">
+        <main>
+          <header>
+            <h2 class="subheader">— The Nova Project</h2>
+            <h1>Best in class biometric tracking and data tracking changing the <em>game</em>.</h1>
+            <p>The Nova project was started to achieve the dream of chaning lifes. Being able to perfect a field that has yet to be conquered. Biometrics are useful on their own, but be able to analyze the data, is a whole sepearte field. We have mastered both because of the careers it can change. </p>
+          </header>
+    
+          <img src="https://images.unsplash.com/photo-1558459654-c430be5b0a44?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=960&h=500" alt="">
+    
+          <section>
+            <h2>The Client</h2>
+            <p>Athletes will not only get a deep insight into their biometric movements, but get an analysis of the movements that will give them useful imformation that will prolong and level up their career</p>
+          </section>
+    
+          <section>
+            <h2>Our Mission</h2>
+            <p>With software as powerful as NOVA, the reason why we started the project can get lost easily. Athletes have the ability to take careers into their own hands and level up their careers because of NOVA. The strength and fitness field has failed too many athletes not to do something. This porject was not started for the money, but rather the dream. </p>
+          </section>
+          
+          <div class="callout">
+            <h3>Book your assesment today</h3>
+            <p>What is the most powerful weapon an athlete can have? Knowledge. The knowledge that NOVA provides is unmatched across the industry and is the best investment an athlete can make.<br>It's an investment in you.</p>
+          </div>
+    
+        </main>
+      </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -173,4 +227,4 @@
             </div>
         </div>
     </body>
-</html>
+</html> --}}

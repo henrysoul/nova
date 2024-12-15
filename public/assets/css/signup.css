@@ -59,6 +59,11 @@ header.head h1 {
     border-radius: 20px;
     margin-top: 3.5%;
 }
+
+.dec-none {
+  text-decoration: none;
+  cursor: pointer;
+}
   
 /* Signup Container */
 .signup {

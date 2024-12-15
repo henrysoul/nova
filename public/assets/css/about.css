@@ -261,4 +261,9 @@ header.head h1 {
     cursor: pointer;
     border-radius: 20px;
 }
+
+.dec-none {
+  text-decoration: none;
+  cursor: pointer;
+}
   

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const individualBtn = document.getElementById("individual");
+    const type = document.getElementById("type");
     const groupBtn = document.getElementById("group");
     const numberOfAthletesLabel = document.getElementById("numberofath");
     const athletesInput = document.getElementById("athletes");
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Hide the 'Number of Athletes' field when 'Individual' is selected
         numberOfAthletesLabel.style.display = "none";
         athletesInput.style.display = "none";
+        type.value = 0;
     });
 
     // Event listener for the 'Group' button
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show the 'Number of Athletes' field when 'Group' is selected
         numberOfAthletesLabel.style.display = "block";
         athletesInput.style.display = "block";
+        type.value = 1;
     });
 
     // Event listener for the 'Contact today' button

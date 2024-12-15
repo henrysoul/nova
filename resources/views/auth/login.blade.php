@@ -56,7 +56,7 @@
    </head>
 <body>
     @include('includes.header')
-    
+   
     <div class="rotating-text">
         <p>Nova Tracking is</p>
         <p>
