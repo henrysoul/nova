@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('assets/css/schedule.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>
@@ -33,11 +34,11 @@
         <form method="post" action="saveSchedule" id="form">
             @csrf
             <label for="name">Name</label>
-            <input type="text" id="name" required placeholder="Enter your full name"
+            <input type="text" id="name" name="name" required placeholder="Enter your full name"
                 value="{{ old('name') ? old('name') : Auth::user()->name }}">
 
             <label for="email">Email</label>
-            <input type="email" id="email" required placeholder="Enter your email"
+            <input type="email" id="email" name="email" required placeholder="Enter your email"
                 value="{{ old('email') ? old('email') : Auth::user()->email }}">
 
             <label>Need of assesment</label>
@@ -50,13 +51,13 @@
 
             <!-- This field will appear if "Group" is selected -->
             <label id="numberofath" for="number">Number of Athletes</label>
-            <input type="text" id="athletes" placeholder="Enter the number of athletes">
+            <input type="text" id="athletes" name="no_of_athletes" placeholder="Enter the number of athletes">
             <label id="location" for="location">Assesment Location</label>
-            <input type="text" id="location" placeholder="Where do you want to do the assesment">
+            <input type="text" id="location" name="location" required placeholder="Where do you want to do the assesment">
             <label for="number">Phone Number</label>
-            <input type="text" id="number" required placeholder="Enter your phone number">
+            <input type="text" id="number" name="phone" required placeholder="Enter your phone number">
             <label for="date">Preferred Date of assesment</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date" name="date" required min="{{ now()->toDateString() }}">
             <input type="hidden" id="type" name="type" value="0"/>
             <button type="button" id="submit">Submit</button>
 
@@ -72,7 +73,7 @@
         <a href="{{url('/about')}}">Learn more about NOVA software</a>
         <button id="cancel">X</button>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{{ asset('assets/js/schedule.js') }}"></script>
 </body>
 

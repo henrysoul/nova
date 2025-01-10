@@ -42,22 +42,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const cancelButton = document.getElementById("cancel");
     const popup = document.querySelector(".popup");
     const overlay = document.querySelector(".popup-overlay");
+    const form = document.querySelector('#form');
 
     // Show the popup when the submit button is clicked
-    submitButton.addEventListener("click", () => {
-        popup.style.display = "block";
-        overlay.style.display = "block";
+    submitButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(form.checkValidity()){
+            $.ajax({
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                },
+                data: $('#form').serialize(),
+                method: "post",
+                url: "/schedule-assessment",
+                success: function (data) {
+                    console.log(data,"here");
+                    popup.style.display = "block";
+                    overlay.style.display = "block";
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }else{
+            form.reportValidity()
+        }
+        
     });
 
     // Hide the popup when the cancel button is clicked
     cancelButton.addEventListener("click", () => {
         popup.style.display = "none";
         overlay.style.display = "none";
+        window.location.reload();
     });
 
     // Optional: Hide the popup if the overlay is clicked
     overlay.addEventListener("click", () => {
         popup.style.display = "none";
         overlay.style.display = "none";
+        window.location.reload();
     });
 });

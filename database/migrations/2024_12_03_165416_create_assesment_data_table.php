@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('uuid');
             $table->foreignId('assesment_id');
             $table->string("injury_history")->nullable();
+            $table->string('name')->nullable();
+            $table->string('age')->nullable();
             $table->string("10_yard_dash_relative_ratio")->nullable();
             $table->string("vertical_jump_relative_ratio")->nullable();
             $table->string("squat_relative_ratio")->nullable();
