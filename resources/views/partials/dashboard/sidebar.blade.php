@@ -5,6 +5,11 @@
                     class="flaticon-open-book"></i><span class="menu-active">Home</span></a>
         </li>
         <li class="nav-item">
+            <a href="{{ route('users') }}"
+                class="nav-link {{ Request::is('users') ? 'menu-active' : '' }} "><i
+                    class="flaticon-open-book"></i><span class="menu-active">Users</span></a>
+        </li>
+        <li class="nav-item">
             <a href="{{ route('assessments') }}"
                 class="nav-link {{ Request::is('assessments') ? 'menu-active' : '' }} "><i
                     class="flaticon-open-book"></i><span class="menu-active">Assessments</span></a>

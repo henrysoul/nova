@@ -56,7 +56,7 @@
                     </div>
                     <div class="item-content">
                         <ul class="settings-list">
-                            <li><a href="login.html" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                            <li><a href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="flaticon-turn-off"></i>Log Out</a></li>
                         </ul>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

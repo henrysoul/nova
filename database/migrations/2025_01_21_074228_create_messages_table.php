@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('assesment_media', function (Blueprint $table) {
-            $table->id();
-            $table->string('uuid');
-            $table->foreignId('assesment_data_id');
-            $table->string('description')->nullable();
-            $table->string('path');
+        Schema::create('messages', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->text('message');
             $table->timestamps();
-        });
+          });
+          
     }
 
     /**
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('assesment_media');
+        Schema::dropIfExists('messages');
     }
 };
